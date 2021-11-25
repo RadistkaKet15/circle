@@ -5,13 +5,13 @@ from PyQt5 import uic
 from PyQt5.QtWidgets import QApplication, QWidget
 from PyQt5.QtCore import Qt, QPoint
 from PyQt5.QtGui import QPainter, QColor, QPolygon
-from untitled import Ui_Form
+from PyQt5 import uic
 
 
-class Example(QWidget, Ui_Form):
+class Example(QWidget):
     def __init__(self):
         super().__init__()
-        self.setupUi(self)
+        uic.loadUi("untitled.ui", self)
         self.pushButton.clicked.connect(self.run)
         self.do_paint = False
 

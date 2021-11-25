@@ -37,7 +37,7 @@ class Example(Ui_Form):
         if self.do_paint:
             qp = QPainter()
             qp.begin(self)
-            qp.setBrush(QColor(0, 0, 0))
+            qp.setBrush(QColor())
             qp.drawEllipse(self.x, self.y, self.x, self.x)
             qp.end()
         self.update()
